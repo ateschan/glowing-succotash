@@ -2,3 +2,8 @@
 
 Addison Wuz Here
 Sean Meegan
+<<<<<<< Updated upstream
+=======
+Dalton
+Ian Hoell
+>>>>>>> Stashed changes
