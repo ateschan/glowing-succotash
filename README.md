@@ -12,5 +12,5 @@ Right click on project -> open module settings -> modules -> Use java8_202 sdk -
 </p>
 
 You may need specific vm flags for your run configuration. <br />
-.This lets my machine render the 3d models. Otherwise you may not see them.<br />
+This lets my machine render the 3d models. Otherwise you may not see them.<br />
 -Dprism.forceGPU=true
