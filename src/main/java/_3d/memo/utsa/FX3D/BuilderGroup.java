@@ -1,4 +1,4 @@
-package _3d.memo.utsa.model;
+package _3d.memo.utsa.FX3D;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -10,6 +10,9 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.MeshView;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+
 import static _3d.memo.utsa.MainEntry.VIEWPORT_SIZE;
 
 // Builds a javafx group that holds all 3D objects as children
@@ -40,6 +43,12 @@ public class BuilderGroup extends Group {
     private Lighting lights;
     private PerspectiveCamera camera;
 
+
+
+    public BuilderGroup() {
+    }
+
+    //Parameterized Constructor
     public BuilderGroup(MeshView[] m) {
         this.setTranslateX(0);
         this.setTranslateY(0);
@@ -54,20 +63,27 @@ public class BuilderGroup extends Group {
         this.addLighting();
     }
 
+    public void setModelFromFileName(String fileName) throws IOException {
+        this.modelMesh = ModeledMeshView.LoadMeshView(fileName);
+        this.addModelMesh();
+        this.getChildren().addAll(this.modelMesh);
+        this.addLighting();
+    }
+
     private void setMaterial(MeshView m) {
         modelMaterial.setSpecularColor(this.modelColor);
         modelMaterial.setSpecularPower(16);
         m.setMaterial(this.modelMaterial);
     }
 
-    public void addUserInput(Stage primaryStage, SubScene dscene) {
+    public void addUserInputControls(Stage primaryStage, SubScene dscene) {
         addMouseControl(dscene, primaryStage);
         addKeyboardControl(primaryStage);
         addCamera(dscene);
     }
 
     //Adds a single model mesh as a child to builder group
-    public void addModelMesh() {
+    private void addModelMesh() {
         for (MeshView m : this.modelMesh) {
             setMaterial(m);
             m.setTranslateX(0);
@@ -80,12 +96,24 @@ public class BuilderGroup extends Group {
         }
     }
 
-    public void addLighting() {
+    private void addLighting() {
         this.lights = new Lighting();
         this.getChildren().add(this.lights.aLight);
         for (PointLight p : this.lights.pLights) {
             this.getChildren().add(p);
         }
+    }
+
+    public void setPointLightColor(Color color) {
+        this.lights.setPointLightColor(color);
+    }
+
+    public void setAmbientLightColor(Color color) {
+        this.lights.setPointLightColor(color);
+    }
+
+    public void setModelColor(Color modelColor) {
+        this.modelColor = modelColor;
     }
 
     public void addCamera(SubScene scene) {

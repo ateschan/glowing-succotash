@@ -37,7 +37,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="52.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_3d.memo.utsa.MainController">
+<AnchorPane prefHeight="52.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_3d.memo.utsa.MainScreenController">
   <children>
       <MenuBar layoutX="14.0" layoutY="13.0" prefHeight="27.0" prefWidth="198.0">
         <menus>
@@ -51,7 +51,7 @@
                   </Menu>
                   <MenuItem mnemonicParsing="false" text="Open Project" />
                   <MenuItem mnemonicParsing="false" text="Save Note" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
+            <MenuItem mnemonicParsing="false" onAction="#onQuit" text="Quit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text=" Options  ">

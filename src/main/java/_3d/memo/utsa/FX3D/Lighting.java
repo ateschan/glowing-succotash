@@ -1,4 +1,4 @@
-package _3d.memo.utsa.model;
+package _3d.memo.utsa.FX3D;
 
 import javafx.scene.AmbientLight;
 import javafx.scene.PointLight;
@@ -14,6 +14,19 @@ public class Lighting {
 
     private Color lightColor = Color.rgb(244, 255, 250);
     private Color ambientColor = Color.rgb(80, 80, 80, 0);
+
+    public Color getAmbientColor() {
+        return ambientColor;
+    }
+
+    public void setAmbientColor(Color ambientColor)
+    {
+        this.ambientColor = ambientColor;
+    }
+
+    public void setPointLightColor(Color lightColor) {
+        this.lightColor = lightColor;
+    }
 
     public Lighting() {
         this.aLight = new AmbientLight();
