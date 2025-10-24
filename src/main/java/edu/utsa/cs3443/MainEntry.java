@@ -1,5 +1,5 @@
-package _3d.memo.utsa;
-import _3d.memo.utsa.FX3D.BuilderGroup;
+package edu.utsa.cs3443;
+import edu.utsa.cs3443.FX3D.BuilderGroup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
@@ -7,7 +7,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import java.io.IOException;
-
 
 //FXML version must be <AnchorPane prefHeight="164.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jemofx.HelloController">
 public class MainEntry extends Application {
@@ -38,7 +37,7 @@ public class MainEntry extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        mainScreenController.newProjectFromModel("data/CylinderHead-ascii.stl");
+        mainScreenController.attachNewModelToPrimaryStage("data/CylinderHead-ascii.stl");
     }
 
     public static void main(String[] args) {

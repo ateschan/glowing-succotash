@@ -1,4 +1,4 @@
-package _3d.memo.utsa.FX3D;
+package edu.utsa.cs3443.FX3D;
 
 import com.interactivemesh.jfx.importer.stl.StlMeshImporter;
 import com.interactivemesh.jfx.importer.obj.ObjModelImporter;

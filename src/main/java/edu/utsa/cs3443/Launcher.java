@@ -1,4 +1,4 @@
-package _3d.memo.utsa;
+package edu.utsa.cs3443;
 
 import javafx.application.Application;
 

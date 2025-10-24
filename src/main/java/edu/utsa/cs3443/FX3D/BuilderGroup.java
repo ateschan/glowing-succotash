@@ -1,4 +1,4 @@
-package _3d.memo.utsa.FX3D;
+package edu.utsa.cs3443.FX3D;
 
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static _3d.memo.utsa.MainEntry.VIEWPORT_SIZE;
+import static edu.utsa.cs3443.MainEntry.VIEWPORT_SIZE;
 
 // Builds a javafx group that holds all 3D objects as children
 // Entire BuilderGroup can be rotated around an anchor point in a 3D scene
@@ -42,8 +42,6 @@ public class BuilderGroup extends Group {
 
     private Lighting lights;
     private PerspectiveCamera camera;
-
-
 
     public BuilderGroup() {
     }
@@ -187,4 +185,5 @@ public class BuilderGroup extends Group {
             }
         });
     }
+
 }

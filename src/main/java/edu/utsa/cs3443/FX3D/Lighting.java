@@ -1,11 +1,11 @@
-package _3d.memo.utsa.FX3D;
+package edu.utsa.cs3443.FX3D;
 
 import javafx.scene.AmbientLight;
 import javafx.scene.PointLight;
 import javafx.scene.paint.Color;
 import java.util.ArrayList;
 
-import static _3d.memo.utsa.MainEntry.VIEWPORT_SIZE;
+import static edu.utsa.cs3443.MainEntry.VIEWPORT_SIZE;
 
 //Holds lights fro builder group
 public class Lighting {

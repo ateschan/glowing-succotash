@@ -37,7 +37,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="52.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="_3d.memo.utsa.MainScreenController">
+<AnchorPane prefHeight="52.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.MainScreenController">
   <children>
       <MenuBar layoutX="14.0" layoutY="13.0" prefHeight="27.0" prefWidth="198.0">
         <menus>
@@ -45,25 +45,25 @@
             <items>
                   <Menu mnemonicParsing="false" text="New">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Project" />
-                    <MenuItem mnemonicParsing="false" text="Note" />
+                        <MenuItem mnemonicParsing="false" text="Project" onAction="#onNewProjectClick" />
+                    <MenuItem mnemonicParsing="false" text="Note" onAction="#onNewNoteClick"/>
                     </items>
                   </Menu>
-                  <MenuItem mnemonicParsing="false" text="Open Project" />
-                  <MenuItem mnemonicParsing="false" text="Save Note" />
-            <MenuItem mnemonicParsing="false" onAction="#onQuit" text="Quit" />
+                  <MenuItem mnemonicParsing="false" text="Open Project" onAction="#onOpenProjectClick"/>
+                  <MenuItem mnemonicParsing="false" text="Save Note"  onAction="#onSaveNoteToFileClick"/>
+            <MenuItem mnemonicParsing="false" onAction="#onQuitClick" text="Quit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text=" Options  ">
             <items>
-              <MenuItem mnemonicParsing="false" text="Notes" />
-                  <MenuItem mnemonicParsing="false" text="Theme" />
+              <MenuItem mnemonicParsing="false" text="Notes" onAction="#onNotesSreenClick"/>
+                  <MenuItem mnemonicParsing="false" text="Theme" onAction="#onThemeScreenClick"/>
             </items>
           </Menu>
         <Menu mnemonicParsing="false" text=" Help ">
           <items>
-            <MenuItem mnemonicParsing="false" text="Controls" />
-            <MenuItem mnemonicParsing="false" text="About" />
+            <MenuItem mnemonicParsing="false" text="Controls" onAction="#onControlsScreenClick" />
+            <MenuItem mnemonicParsing="false" text="About" onAction="#onAboutScreenClick"/>
           </items>
         </Menu>
         </menus>
